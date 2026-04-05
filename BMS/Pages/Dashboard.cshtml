@@ -1,0 +1,25 @@
+@page
+@model BMS.Pages.DashboardModel
+@using Microsoft.AspNetCore.Authorization
+@attribute [Authorize]
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<h2>Bank Dashboard</h2>
+
+<p>Welcome, @User.Identity?.Name!</p>
+
+<section>
+    <h3>Accounts</h3>
+    <p>Placeholder for account summaries, balances, recent transactions.</p>
+</section>
+
+<section>
+    <h3>Quick Actions</h3>
+    <ul>
+        <li>Create / Manage Accounts</li>
+        <li>Transfer funds</li>
+        <li>View statements</li>
+    </ul>
+</section>

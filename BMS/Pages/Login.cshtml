@@ -1,0 +1,25 @@
+@page
+@model BMS.Pages.LoginModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h2>Login</h2>
+
+<form method="post">
+    <div>
+        <label asp-for="Input.UsernameOrEmail"></label>
+        <input asp-for="Input.UsernameOrEmail" />
+        <span asp-validation-for="Input.UsernameOrEmail"></span>
+    </div>
+    <div>
+        <label asp-for="Input.Password"></label>
+        <input asp-for="Input.Password" type="password" />
+        <span asp-validation-for="Input.Password"></span>
+    </div>
+    <button type="submit">Login</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
